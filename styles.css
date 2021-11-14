@@ -1,5 +1,14 @@
+/* I found out the ttc format isn't supported so I found a way to convert the font from ttc to ttf with this website: https://transfonter.org/ttc-unpack */
+
+@font-face{
+    font-family: 'Galvji';
+    src: url(Galvji-01.ttf);
+}
+
 body{
     background-color: white;
+    margin:0;
+    font-family: 'Galvji', sans-serif;
 }
 
 img{
@@ -17,61 +26,61 @@ img{
 
 h1{text-align: center;
   color: black;
-  font-family: Gavlji, black;
+  font-family: 'Galvji', sans-serif;
   font-size: 50%;
 }
 
-h2{text-align: center;
-        color: tomato;
-        font-family: signpainter;
-        font-size: 300%;
-
-      }
-
-
- h3{text-align: center;
-          color: white;
-          font-family: Georgia, serif;
-          font-size: 400%
+h2{
+    text-align: center;
+    color: tomato;
+    font-family: 'signpainter';
+    font-size: 300%;
 }
 
-h4{text-align: center;
-  color: saddlebrown;
-  font-family: Georgia, serif;
-  font-size: 200%
 
-
+ h3{
+    text-align: center;
+    color: white;
+    font-size: 400%;
 }
 
-a{color: blue;
-
+h4{
+    text-align: center;
+    color: saddlebrown;
+    font-size: 200%;
 }
 
-li{line-height: 1.5em;
-  text-align: center;
-  font-size: 80%;
+a{
+    color: blue;
+}
+
+li{
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 80%;
 
 }
 
 a:hover{color: lightblue;}
 
-p{text-align: center;
- font-family: Georgia, serif;
+p{
+    text-align: center;
+    line-height: 1.5;
+ /* font-family: Georgia, serif; */
 }
 
 .center {
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-link{font-size: 250%;
+link{
+    font-size: 250%;
 }
 
-body{
-  margin:0;
-}
+
 .repeat{
 /*   replace the image with your own, I only used these triangles b/c they had a transparent background and they were already hosted online */
   background-image: url("triangle1.png");
@@ -95,36 +104,42 @@ body{
 
 }
 
-. button{
-  font-family: 'Georgia, serif';
-  color: green
+button{
+  /* font-family: Georgia, serif; */
+  color: green;
   letter-spacing: 1.2px;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-  border: 1px solid white;
-  border-radius: 5px;
-  padding:10px;
+  /* border: 1px solid white; */
+  /* border-radius: 5px; */
+  border:none;
+  padding:12px;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.3em;
+}
+
+button:hover{
+    background: none;
 }
 
 
-img{
-  width:50%;
-
-
+input{
+    text-align: center;
 }
 
-
-input{text-align: center;
-
+.row{
 
 }
-
-
+.col{
+    padding-bottom:30px;
+}
  .gallery{
     width: 100%;
 
  }
+
+footer{
+    padding:50px;
+}
 
 /* --------
 START Nav Styles
@@ -142,7 +157,7 @@ START Nav Styles
 .topnav a {
  color: white;
  text-decoration: none;
- font-family: Georgia, serif;
+ /* font-family: Georgia, serif; */
  font-size: 17px;
   /* Leave the styles below alone */
    display: inline-block;
@@ -170,9 +185,27 @@ END Nav Styles for MOBILE
 @media only screen and (min-width:600px){
   #logo{
     width:500px;
-
+  }
+  .gallery{
+      width:100%;
 
   }
+
+  .row{
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-bottom: 30px;
+      grid-gap: 20px;
+
+  }
+  .col{
+      width: 33%;
+  }
+
+
 
 }
 
